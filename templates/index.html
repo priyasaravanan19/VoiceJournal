@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VoiceJournal</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            🎙️ VoiceJournal
+        </div>
+
+        <div class="header-right">
+            <span id="date"></span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Capture Your Thoughts</h1>
+
+            <p>
+                Speak your thoughts and turn them into meaningful journal entries.
+            </p>
+        </section>
+
+
+        <section class="journal-container">
+
+            <!-- Voice Recorder -->
+
+            <div class="card recorder-card">
+
+                <h2>🎤 Voice Recorder</h2>
+
+                <p class="status" id="status">
+                    Click the button and start speaking
+                </p>
+
+                <button id="recordBtn" class="record-btn">
+                    🎙️ Start Recording
+                </button>
+
+                <div class="timer" id="timer">
+                    00:00
+                </div>
+
+            </div>
+
+
+            <!-- Journal Editor -->
+
+            <div class="card editor-card">
+
+                <div class="editor-header">
+
+                    <h2>📝 Your Journal</h2>
+
+                    <span id="wordCount">
+                        0 words
+                    </span>
+
+                </div>
+
+                <input type="text" id="title" placeholder="Journal title...">
+
+                <textarea id="journalText" placeholder="Your spoken words will appear here..."></textarea>
+
+                <div class="buttons">
+
+                    <button id="saveBtn" class="save-btn">
+                        💾 Save Entry
+                    </button>
+
+                    <button id="clearBtn" class="clear-btn">
+                        Clear
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Previous Entries -->
+
+        <section class="entries-section">
+
+            <div class="section-header">
+
+                <h2>📖 Previous Entries</h2>
+
+                <input type="text" id="searchInput" placeholder="Search entries...">
+
+            </div>
+
+            <div id="entriesContainer">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

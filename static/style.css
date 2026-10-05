@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #222;
+}
+
+
+/* Header */
+
+header {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5b4bdb;
+}
+
+.header-right {
+    color: #666;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 45px 0 30px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    color: #333;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #777;
+}
+
+
+/* Journal Container */
+
+.journal-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+}
+
+
+/* Cards */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(60, 60, 120, 0.08);
+}
+
+
+/* Recorder */
+
+.recorder-card {
+    text-align: center;
+}
+
+.recorder-card h2 {
+    margin-bottom: 20px;
+}
+
+.status {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.record-btn {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: none;
+    background: #6657e8;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.record-btn:hover {
+    transform: scale(1.05);
+}
+
+.recording {
+    background: #e74c3c;
+}
+
+.timer {
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Editor */
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#wordCount {
+    color: #777;
+}
+
+#title {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    resize: vertical;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea:focus,
+#title:focus {
+    border-color: #6657e8;
+}
+
+
+/* Buttons */
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #6657e8;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+}
+
+.clear-btn {
+    background: #eee;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+}
+
+
+/* Entries */
+
+.entries-section {
+    margin: 40px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 12px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* Entry */
+
+.entry {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.entry h3 {
+    color: #4c3fd1;
+}
+
+.entry-date {
+    font-size: 13px;
+    color: #888;
+    margin: 5px 0 10px;
+}
+
+.entry-content {
+    color: #555;
+    line-height: 1.6;
+}
+
+.delete-btn {
+    margin-top: 12px;
+    background: #ffeded;
+    color: #d33;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .journal-container {
+        grid-template-columns: 1fr;
+    }
+    header {
+        padding: 0 20px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    #searchInput {
+        width: 100%;
+    }
+}
